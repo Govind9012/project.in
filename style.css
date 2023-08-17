@@ -43,3 +43,28 @@
     display: flex;
     margin: auto;
 }
+.mycode{
+    border-radius: 50%;
+    background-color: white;
+    
+}
+.developerimg{
+    top: 5vh;
+    left: 75%;
+    width: 25%;
+    position: relative;
+    background-color: black;
+    
+}
+.developertext{
+    top: 10vh;
+    left: 5%;
+    font: bolder;
+    
+    
+    
+}
+#font{
+    left: 10vh;
+    font-family: "Sofia", sans-serif;
+}
