@@ -3,124 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project's Source Code</title>
+    <title>Document</title>
 </head>
 <body>
-    <div class="navbar">
-        <nav class="bg-gray-800">
-            <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-              <div class="relative flex h-16 items-center justify-between">
-                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                  <!-- Mobile menu button-->
-                  <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
-                    <span class="absolute -inset-0.5"></span>
-                    <span class="sr-only">Open main menu</span>
-                    <!--
-                      Icon when menu is closed.
-          
-                      Menu open: "hidden", Menu closed: "block"
-                    -->
-                    <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                    </svg>
-                    <!--
-                      Icon when menu is open.
-          
-                      Menu open: "block", Menu closed: "hidden"
-                    -->
-                    <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </button>
+    <div class="flex items-center justify-center text-center bg-gradient-to-r from-fuchsia-500 via-red-600 to-cyan-400 w-[100%]">
+        <div class="flex flex-col items-center justify-center rounded-tr-full rounded-bl-full w-full bg-white">
+          <div class="flex flex-col p-2 m-2 w-full">
+            <div class="text-xl md:text-3xl font-medium">Developer Of This Website</div>
+  
+            <div
+              class="flex items-center justify-center md:flex-row flex-col space-x-4 space-y-4 p-2"
+            >
+              <div
+                class="flex-col px-6 py-2 shadow-xl rounded-2xl hover:scale-105 w-[90%] md:w-1/4"
+              >
+                <div
+                  class="h-40 w-40 border-2 border-cyan-500 rounded-full overflow-hidden bg-gray-200"
+                >
+                  <img
+                    src="./dev_img.jpeg"
+                    alt=""
+                    class=""
+                  />
                 </div>
-                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                  <div class="flex flex-shrink-0 items-center">
-                    <img class="h-8 w-auto" src="./img1.jpg" alt="Company's owner ">
-                  </div>
-                  <div class="hidden sm:ml-6 sm:block">
-                    <div class="flex space-x-4">
-                      <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                      <a href="index.html" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Home</a>
-                      <a href="notes.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Notes</a>
-                      <a href="projects.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Projects</a>
-                      <a href="developer.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Developer</a>
-                    </div>
-                  </div>
+  
+                <div
+                  class="text-lg font-medium text-stone-600 cursor-pointer hover:text-stone-400"
+                >
+                  Govind Chaudhary
                 </div>
-                <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                  <button type="button" class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-                    <span class="absolute -inset-1.5"></span>
-                    <span class="sr-only">View notifications</span>
-                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
-                    </svg>
-                  </button>
-          
-                  <!-- Profile dropdown -->
-                  <div class="relative ml-3">
-                    <div>
-                      <button type="button" class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
-                        <span class="absolute -inset-1.5"></span>
-                        <span class="sr-only">Open user menu</span>
-                        <img class="h-8 w-8 rounded-full" src="./img1.jpg" alt="">
-                      </button>
-                    </div>
-          
-                    <!--
-                      Dropdown menu, show/hide based on menu state.
-          
-                      Entering: "transition ease-out duration-100"
-                        From: "transform opacity-0 scale-95"
-                        To: "transform opacity-100 scale-100"
-                      Leaving: "transition ease-in duration-75"
-                        From: "transform opacity-100 scale-100"
-                        To: "transform opacity-0 scale-95"
-                    -->
-                    <div class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
-                      <!-- Active: "bg-gray-100", Not Active: "" -->
-                      <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</a>
-                      <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</a>
-                      <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a>
-                    </div>
-                  </div>
+                <div class="italic text-gray-500 text-sm">OWNER , project.netfy.in</div>
+                <div class="flex my-2">
+                  <a
+                    href="#"
+                    class="w-9 h-9 rounded-full border-cyan-500 border text-stone-500 hover:bg-cyan-500 hover:text-white mx-1 pt-1 inline-block"
+                    ><i class="fa fa-twitter"></i
+                  ></a>
+                  <a
+                    href="https://www.instagram.com/__govindchaudhary/"
+                    class="w-9 h-9 rounded-full border-cyan-500 border text-stone-500 hover:bg-cyan-500 hover:text-white mx-1 pt-1 inline-block"
+                    ><i class="fa fa-instagram"></i
+                  ></a>
+                  <a
+                    href="https://www.facebook.com/profile.php?id=100027228453290&sk=photos_by"
+                    class="w-9 h-9 rounded-full border-cyan-500 border text-stone-500 hover:bg-cyan-500 hover:text-white mx-1 pt-1 inline-block"
+                    ><i class="fa fa-facebook"></i
+                  ></a>
+                  <a
+                    href="https://www.linkedin.com/in/govind-chaudhary-057770189/"
+                    class="w-9 h-9 rounded-full border-cyan-500 border text-stone-500 hover:bg-cyan-500 hover:text-white mx-1 pt-1 inline-block"
+                    ><i class="fa fa-linkedin"></i
+                  ></a>
                 </div>
               </div>
+              
+               </div>
             </div>
-          
-            <!-- Mobile menu, show/hide based on menu state. -->
-            <div class="sm:hidden" id="mobile-menu">
-              <div class="space-y-1 px-2 pb-3 pt-2">
-                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <a href="index.html" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Home</a>
-                <a href="notes.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Notes</a>
-                <a href="Projects.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Projects</a>
-                <a href="developer.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Developer</a>
-              </div>
-            </div>
-          </nav>
-          
-    </div>
-
-    <div class="developerText">
-      <p><b>Hey, <br><i>Developers Community</i></b></p>
-      <br>
-       
-      <p id="font"><b>I Am GOVIND CHAUDHARY</b></p>
-      </div>
-<div class="mycode">
-
-<div class="developerimg">
-  <img src="dev_img.jpeg" alt="Developer' image">
-  </div>
-
-
-</div>
-
-
-
-
+          </div>
+        </div>
+      </div> 
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script src="https://use.fontawesome.com/03f8a0ebd4.js"></script>
+      <script
+        type="module"
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+      ></script>
+      <script
+        nomodule
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+      ></script>  
 </body>
 </html>
