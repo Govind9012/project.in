@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Clock With Alarm</title>
+  </head>
+  <body>
+    <div class="col">
+      <div class="card mb-4 rounded-3 shadow-sm">
+        <div class="card-header py-3">
+          <h4 class="my-0 fw-normal"><b><i>Alarm App</i></b></h4>
+        </div>
+        <div class="card-body">
+          <h1  class="card-title pricing-card-title" id="time">
+          </h1>
+          <ul class="list-unstyled mt-3 mb-4">
+            <li><b>Steps to use :</b></li>
+            <li>Choose a time for alarm</li>
+            <li>Alarm will ring at your fixed time</li>
+            <li><b>Warning :</b> Do not close the app otherwise alarm will not ring</li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+<!-- skeleton of alarm  -->
+    <div class="container">
+        <h3 style="align-items: center;"><b>Select The Time To Set Your Alarm</b></h3>
+        <br>
+        <label for="appt"><i>Select a time:</i></label>
+        <input type="time" id="alarm" name="alarm">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script>
+        updateTime = () => {
+        let d = new Date ;
+        a = d.toLocaleString(time, {timeZone: 'Asia/Kolkata'});
+        time.innerHTML = a.split(", ")[1] ;
+        let alarmHours = alarm.value.split(":")[0] ;
+        let alarmMin = alarm.value.split(":")[1] ;
+        if(d.getHours() == alarmHours && d.getMinutes() == alarmMin){
+            var audio = new Audio('AlarmAudio.wav');
+            audio.play();
+        }
+    }
+    setInterval(updateTime , 1000);
+    </script>
+  </body>
+</html>
