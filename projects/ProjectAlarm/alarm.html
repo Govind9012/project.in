@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <title>Clock With Alarm</title>
   </head>
@@ -32,7 +33,13 @@
         <label for="appt"><i>Select a time:</i></label>
         <input type="time" id="alarm" name="alarm">
     </div>
+    <br>
+    <div class="text-center">
+      <button type="button" class="btn  bg-blue-500 hover:bg-blue-400 text-red font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"><a href="./ProjectAlarm.zip" >Download Source Code</a>
+      </button>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <!-- java script of alarm -->
     <script>
         updateTime = () => {
         let d = new Date ;
